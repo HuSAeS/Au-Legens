@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b2i2dic4igu6p"]
+
+[node name="First level" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 380.0
+offset_top = 17.0
+offset_right = 1068.0
+offset_bottom = 129.0
+text = "Алгебра говно!!!!!!!!!!!!!!!!!!!!!!!"
