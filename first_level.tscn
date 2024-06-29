@@ -1,10 +1,19 @@
-[gd_scene format=3 uid="uid://b2i2dic4igu6p"]
+[gd_scene load_steps=3 format=3 uid="uid://b2i2dic4igu6p"]
+
+[ext_resource type="PackedScene" uid="uid://cxn7asse4ynvb" path="res://player/player.tscn" id="1_qg60u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2dhm"]
+size = Vector2(905, 79)
 
 [node name="First level" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 380.0
-offset_top = 17.0
-offset_right = 1068.0
-offset_bottom = 129.0
-text = "Алгебра говно!!!!!!!!!!!!!!!!!!!!!!!"
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_qg60u")]
+position = Vector2(316, 145)
+scale = Vector2(2.845, 2.845)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(500.5, 349)
+shape = SubResource("RectangleShape2D_k2dhm")
+debug_color = Color(0.318482, 0.523012, 0.902437, 0.42)
