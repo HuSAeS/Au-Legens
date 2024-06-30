@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2i2dic4igu6p"]
+[gd_scene load_steps=4 format=3 uid="uid://b2i2dic4igu6p"]
 
 [ext_resource type="PackedScene" uid="uid://cxn7asse4ynvb" path="res://player/player.tscn" id="1_qg60u"]
+[ext_resource type="Texture2D" uid="uid://dogkkpg3pnjne" path="res://player/ground.png" id="2_s23kk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2dhm"]
-size = Vector2(905, 79)
+size = Vector2(167, 79)
 
 [node name="First level" type="Node2D"]
 
@@ -14,6 +15,23 @@ scale = Vector2(2.845, 2.845)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(500.5, 349)
+position = Vector2(370, 349)
+scale = Vector2(1.535, 1.535)
 shape = SubResource("RectangleShape2D_k2dhm")
 debug_color = Color(0.318482, 0.523012, 0.902437, 0.42)
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(-0.5, -5.96046e-08)
+scale = Vector2(1.705, 1.371)
+texture = ExtResource("2_s23kk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(200.89, 349)
+scale = Vector2(1.535, 1.535)
+shape = SubResource("RectangleShape2D_k2dhm")
+debug_color = Color(0.318482, 0.523012, 0.902437, 0.42)
+
+[node name="Ground" type="Sprite2D" parent="StaticBody2D/CollisionShape2D2"]
+position = Vector2(-2.02282, 0.651466)
+scale = Vector2(1.705, 1.371)
+texture = ExtResource("2_s23kk")
